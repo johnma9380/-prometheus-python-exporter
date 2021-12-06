@@ -1,49 +1,62 @@
 instance_metric:
-  - AbortedClients
-  - ActiveTransactions
-  - AuroraBinlogReplicaLag
-  - AuroraReplicaLagMaximum
-  - BlockedTransactions
-  - BufferCacheHitRatio
-  - CommitLatency
-  - CommitThroughput
-  - CPUUtilization
-  - FreeStorageSpace
-  - DatabaseConnections
-  - DBLoad
-  - DDLLatency
-  - DDLThroughput
-  - Deadlocks
-  - DeleteLatency
-  - DeleteThroughput
-  - DMLLatency
-  - DMLThroughput
-  - EBSByteBalance%
-  - EBSIOBalance%
-  - FreeableMemory
-  - FreeLocalStorage
-  - InsertLatency
-  - InsertThroughput
-  - NetworkReceiveThroughput
-  - NetworkThroughput
-  - NetworkTransmitThroughput
-  - Queries
-  - ReadIOPS
-  - ReadLatency
-  - ReplicaLag
-  - RowLockTime
-  - SelectLatency
-  - SelectThroughput
-  - SwapUsage
-  - UpdateLatency
-  - UpdateThroughput
-  - WriteIOPS
-  - WriteLatency
+  - aurora:
+    - CPUUtilization
+    - AbortedClients
+    - ActiveTransactions
+    - AuroraBinlogReplicaLag
+    - AuroraReplicaLagMaximum
+    - BlockedTransactions
+    - BufferCacheHitRatio
+    - CommitLatency
+    - CommitThroughput
+    - ConnectionAttempts
+    - DatabaseConnections
+    - DDLLatency
+    - DDLThroughput
+    - Deadlocks
+    - DeleteLatency
+    - DeleteThroughput
+    - DMLLatency
+    - DMLThroughput
+    - FreeableMemory
+    - FreeLocalStorage
+    - InsertLatency
+    - InsertThroughput
+    - NetworkReceiveThroughput
+    - NetworkThroughput
+    - NetworkTransmitThroughput
+    - Queries
+    - ReadLatency
+    - RollbackSegmentHistoryListLength
+    - RowLockTime
+    - SelectLatency
+    - SelectThroughput
+    - SumBinaryLogSize
+    - UpdateLatency
+    - UpdateThroughput
+    - WriteLatency
+  - mysql:
+    - NetworkTransmitThroughput
+    - WriteIOPS
+    - BinLogDiskUsage
+    - DatabaseConnections
+    - FreeStorageSpace
+    - SwapUsage
+    - CPUUtilization
+    - WriteThroughput
+    - ReadIOPS
+    - ReadLatency
+    - WriteLatency
+    - DiskQueueDepth
+    - ReadThroughput
+    - NetworkReceiveThroughput
+    - FreeableMemory
+    - DBLoadNonCPU
+    - DBLoad
+    - DBLoadCPU
+    - ReplicaLag
 cluster_metric:
-  - EBSByteBalance%
-  - ForwardingReplicaDMLThroughput
   - LoginFailures
-  - Aurora_pq_request_attempted
   - UpdateThroughput
   - ResultSetCacheHitRatio
   - SelectLatency
@@ -55,4 +68,3 @@ cluster_metric:
   - VolumeWriteIOPs
   - VolumeReadIOPs
   - BackupRetentionPeriodStorageUsed
-  - TotalBackupStorageBilled

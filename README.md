@@ -11,3 +11,11 @@ Default output format [None]:
 
 
 $ python exporter_hook.py
+
+
+Docker:
+docker build -t prometheus-python-exporter .
+docker run -d -p 9120:9120 prometheus-python-exporter
+
+
+curl -i 127.0.0.1:9120/rds/metrics

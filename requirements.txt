@@ -1,0 +1,4 @@
+Flask
+awscli
+boto3
+futures
